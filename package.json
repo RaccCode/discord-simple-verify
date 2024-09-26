@@ -1,0 +1,23 @@
+{
+  "name": "discord-simple-verify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/RaccCode/discord-simple-verify.git",
+  "author": "Miguel Higuera <133175356+MiguelHigueraDev@users.noreply.github.com>",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@types/node": "^22.7.2",
+    "eslint": "^9.11.1",
+    "globals": "^15.9.0",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.7.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.2"
+  }
+}
