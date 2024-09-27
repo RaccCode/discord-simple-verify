@@ -53,7 +53,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
     member.roles.add(role);
 
     await interaction.reply({
-      content: "You have been verified!",
+      content: "You have been verified! Enjoy your stay!",
       ephemeral: true,
     });
   }
