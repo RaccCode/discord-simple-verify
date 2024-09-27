@@ -43,13 +43,22 @@ export const sendButton = async (interaction: ChatInputCommandInteraction) => {
     });
   }
 
-  await channel.send({
-    embeds: [getEmbed()],
-    components: [buttonRow],
-  });
+  try {
+    await channel.send({
+      embeds: [getEmbed()],
+      components: [buttonRow],
+    });
 
-  interaction.reply({
-    content: "Button sent!",
-    ephemeral: true,
-  });
+    interaction.reply({
+      content: "Button sent!",
+      ephemeral: true,
+    });
+  } catch (error) {
+    console.error(error);
+    return interaction.reply({
+      content:
+        "There was an error sending the button. Please make sure that I have permission to access and send messages in this channel.",
+      ephemeral: true,
+    });
+  }
 };
